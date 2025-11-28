@@ -10,3 +10,7 @@ dist
 !.yarn/releases
 !.yarn/sdks
 !.yarn/versions
+
+installer/*
+Icon.*
+*.exe
