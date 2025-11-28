@@ -47,11 +47,14 @@ sudo rm -rf "$INSTALL_DIR"
 sudo mkdir -p "$INSTALL_DIR"
 sudo cp -r "$APP_DIR"/. "$INSTALL_DIR"
 
+echo "→ Instalando dependencias (yarn install)…"
+cd "$INSTALL_DIR"
+yarn install
+
 echo "→ Creando lanzador en $BIN_PATH …"
 sudo bash -c "cat > '$BIN_PATH' << 'EOF'
 #!/bin/bash
-cd '$INSTALL_DIR'
-yarn install
+cd '/opt/Spritesheet Cutter'
 yarn dev &
 xdg-open http://localhost:1234
 EOF"
@@ -68,11 +71,14 @@ Terminal=false
 Categories=Development;Graphics;
 EOF"
 
-sudo cp "$INSTALL_DIR/icon.png" "/usr/share/pixmaps/$APP_NAME.png"
+# Copia del icono si existe
+if [ -f "$INSTALL_DIR/icon.png" ]; then
+  sudo cp "$INSTALL_DIR/icon.png" "/usr/share/pixmaps/$APP_NAME.png"
+fi
 
 echo "→ Limpiando archivos temporales…"
 rm -rf "$TMP_DIR"
 
 echo ""
 echo "✓ Instalación completada correctamente."
-echo "Puedes iniciar la app desde el menú o escribiendo: $APP_NAME"
+echo "Puedes iniciar la app desde el menú o ejecutando: $APP_NAME"
