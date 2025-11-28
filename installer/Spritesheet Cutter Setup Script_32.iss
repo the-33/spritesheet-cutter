@@ -24,7 +24,7 @@ AllowNoIcons=yes
 ; Uncomment the following line to run in non administrative install mode (install for current user only.)
 ;PrivilegesRequired=lowest
 OutputDir=C:\spritesheet-cutter\installer
-OutputBaseFilename=Spritesheet Cutter Setup
+OutputBaseFilename=Spritesheet Cutter Setup_x86
 SetupIconFile=C:\spritesheet-cutter\Icon.ico
 Compression=lzma
 SolidCompression=yes
@@ -43,6 +43,7 @@ Source: "C:\spritesheet-cutter\.yarnrc.yml"; DestDir: "{app}"; Flags: ignorevers
 Source: "C:\spritesheet-cutter\package.json"; DestDir: "{app}"; Flags: ignoreversion
 Source: "C:\spritesheet-cutter\README.md"; DestDir: "{app}"; Flags: ignoreversion
 Source: "C:\spritesheet-cutter\yarn.lock"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\spritesheet-cutter\Icon.png"; DestDir: "{app}"; Flags: ignoreversion
 Source: "C:\spritesheet-cutter\dist\*"; DestDir: "{app}\\dist"; Flags: ignoreversion recursesubdirs createallsubdirs
 Source: "C:\spritesheet-cutter\node_modules\*"; DestDir: "{app}\\node_modules"; Flags: ignoreversion recursesubdirs createallsubdirs
 Source: "C:\spritesheet-cutter\public\*"; DestDir: "{app}\\public"; Flags: ignoreversion recursesubdirs createallsubdirs
