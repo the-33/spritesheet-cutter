@@ -37,6 +37,10 @@ Name: "spanish"; MessagesFile: "compiler:Languages\Spanish.isl"
 [Tasks]
 Name: "desktopicon"; Description: "{cm:CreateDesktopIcon}"; GroupDescription: "{cm:AdditionalIcons}"; Flags: unchecked
 
+[Dirs]
+Name: "{app}\.cache"; Permissions: users-modify
+Name: "{app}\dist"; Permissions: users-modify
+
 [Files]
 Source: "C:\spritesheet-cutter\{#MyAppExeName}"; DestDir: "{app}"; Flags: ignoreversion
 Source: "C:\spritesheet-cutter\.yarnrc.yml"; DestDir: "{app}"; Flags: ignoreversion
@@ -44,11 +48,11 @@ Source: "C:\spritesheet-cutter\package.json"; DestDir: "{app}"; Flags: ignorever
 Source: "C:\spritesheet-cutter\README.md"; DestDir: "{app}"; Flags: ignoreversion
 Source: "C:\spritesheet-cutter\yarn.lock"; DestDir: "{app}"; Flags: ignoreversion
 Source: "C:\spritesheet-cutter\Icon.png"; DestDir: "{app}"; Flags: ignoreversion
-Source: "C:\spritesheet-cutter\dist\*"; DestDir: "{app}\\dist"; Flags: ignoreversion recursesubdirs createallsubdirs
-Source: "C:\spritesheet-cutter\node_modules\*"; DestDir: "{app}\\node_modules"; Flags: ignoreversion recursesubdirs createallsubdirs
-Source: "C:\spritesheet-cutter\public\*"; DestDir: "{app}\\public"; Flags: ignoreversion recursesubdirs createallsubdirs
-Source: "C:\spritesheet-cutter\src\*"; DestDir: "{app}\\src"; Flags: ignoreversion recursesubdirs createallsubdirs
-Source: "C:\spritesheet-cutter\.cache\*"; DestDir: "{app}\\.cache"; Flags: ignoreversion recursesubdirs createallsubdirs
+Source: "C:\spritesheet-cutter\dist\*"; DestDir: "{app}\\dist"; Flags: ignoreversion recursesubdirs createallsubdirs;
+Source: "C:\spritesheet-cutter\node_modules\*"; DestDir: "{app}\\node_modules"; Flags: ignoreversion recursesubdirs createallsubdirs;
+Source: "C:\spritesheet-cutter\public\*"; DestDir: "{app}\\public"; Flags: ignoreversion recursesubdirs createallsubdirs;
+Source: "C:\spritesheet-cutter\src\*"; DestDir: "{app}\\src"; Flags: ignoreversion recursesubdirs createallsubdirs;
+Source: "C:\spritesheet-cutter\.cache\*"; DestDir: "{app}\\.cache"; Flags: ignoreversion recursesubdirs createallsubdirs;
 ; NOTE: Don't use "Flags: ignoreversion" on any shared system files
 
 [Icons]
