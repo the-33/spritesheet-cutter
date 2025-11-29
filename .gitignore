@@ -12,3 +12,4 @@ dist
 !.yarn/versions
 
 *.exe
+release_text.txt
