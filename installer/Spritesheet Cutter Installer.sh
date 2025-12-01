@@ -47,9 +47,14 @@ sudo rm -rf "$INSTALL_DIR"
 sudo mkdir -p "$INSTALL_DIR"
 sudo cp -r "$APP_DIR"/. "$INSTALL_DIR"
 
+INSTALL_USER=${SUDO_USER:-$USER}
+
+echo "→ Setting ownership to $INSTALL_USER …"
+sudo chown -R "$INSTALL_USER":"$INSTALL_USER" "$INSTALL_DIR"
+
 echo "→ Installing dependencies (yarn install)…"
-cd "$INSTALL_DIR"
-yarn install
+sudo -u "$INSTALL_USER" bash -c "cd '$INSTALL_DIR' && yarn install"
+
 
 echo "→ Creating launcher at $BIN_PATH …"
 sudo bash -c "cat > '$BIN_PATH' << 'EOF'
