@@ -61,5 +61,11 @@ Name: "{group}\{cm:UninstallProgram,{#MyAppName}}"; Filename: "{uninstallexe}"
 Name: "{autodesktop}\{#MyAppName}"; Filename: "{app}\{#MyAppExeName}"; Tasks: desktopicon
 
 [Run]
+; Executes yarn install when installation finishes
+Filename: "{cmd}"; \
+    Parameters: "/C cd /D ""{app}"" && call yarn install"; \
+    WorkingDir: "{app}"; \
+    Flags: runhidden waituntilterminated
+
 Filename: "{app}\{#MyAppExeName}"; Description: "{cm:LaunchProgram,{#StringChange(MyAppName, '&', '&&')}}"; Flags: nowait postinstall skipifsilent
 

@@ -5,7 +5,7 @@
 ::YAwzuBVtJxjWCl3EqQJgSA==
 ::ZR4luwNxJguZRRnk
 ::Yhs/ulQjdF+5
-::cxAkpRVqdFKZSDk=
+::cxAkpRVqdFKZSjk=
 ::cBs/ulQjdF+5
 ::ZR41oxFsdFKZSDk=
 ::eBoioBt6dFKZSDk=
@@ -26,12 +26,11 @@
 ::ZQ0/vhVqMQ3MEVWAtB9wSA==
 ::Zg8zqx1/OA3MEVWAtB9wSA==
 ::dhA7pRFwIByZRRnk
-::Zh4grVQjdCyDJEqU5kskLQhcSQGWcWivEqEZ+tTI//iOtkgOXOc6bM/4z6CaJfIsuReqcI4otg==
+::Zh4grVQjdCyDJEqU5kskLQhcSQGWcWivEqEZ+tTI//iOtkgOXOc6bM/4z6CaJfIsvBGqcI4otg==
 ::YB416Ek+ZG8=
 ::
 ::
 ::978f952a14a936cc963da21a135fa983
 @echo off
-call yarn install
 start http://localhost:1234
 call yarn dev
